@@ -32,9 +32,13 @@ public class Principal extends javax.swing.JFrame {
         Inicio = new javax.swing.JMenu();
         Cadastro = new javax.swing.JMenu();
         CadastroPaciente = new javax.swing.JMenuItem();
+        CadastroHipertenso = new javax.swing.JMenuItem();
+        CadastroDiabetico = new javax.swing.JMenuItem();
+        CadastroGestante = new javax.swing.JMenuItem();
+        CadastroMental = new javax.swing.JMenuItem();
         Consolidar = new javax.swing.JMenu();
-        Relatorios = new javax.swing.JMenu();
         Agenda = new javax.swing.JMenu();
+        Relatorios = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,16 +66,38 @@ public class Principal extends javax.swing.JFrame {
         });
         Cadastro.add(CadastroPaciente);
 
+        CadastroHipertenso.setText("Hipertenso");
+        CadastroHipertenso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastroHipertensoActionPerformed(evt);
+            }
+        });
+        Cadastro.add(CadastroHipertenso);
+
+        CadastroDiabetico.setText("Diabetico");
+        Cadastro.add(CadastroDiabetico);
+
+        CadastroGestante.setText("Gestante");
+        Cadastro.add(CadastroGestante);
+
+        CadastroMental.setText("Saude Mental");
+        CadastroMental.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CadastroMentalActionPerformed(evt);
+            }
+        });
+        Cadastro.add(CadastroMental);
+
         Barra.add(Cadastro);
 
         Consolidar.setText("Consolidar");
         Barra.add(Consolidar);
 
-        Relatorios.setText("Relatorios");
-        Barra.add(Relatorios);
-
         Agenda.setText("Agenda");
         Barra.add(Agenda);
+
+        Relatorios.setText("Relatorios");
+        Barra.add(Relatorios);
 
         setJMenuBar(Barra);
 
@@ -96,6 +122,14 @@ public class Principal extends javax.swing.JFrame {
     private void CadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroPacienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CadastroPacienteActionPerformed
+
+    private void CadastroHipertensoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroHipertensoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CadastroHipertensoActionPerformed
+
+    private void CadastroMentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroMentalActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CadastroMentalActionPerformed
 
     /**
      * @param args the command line arguments
@@ -136,6 +170,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu Agenda;
     private javax.swing.JMenuBar Barra;
     private javax.swing.JMenu Cadastro;
+    private javax.swing.JMenuItem CadastroDiabetico;
+    private javax.swing.JMenuItem CadastroGestante;
+    private javax.swing.JMenuItem CadastroHipertenso;
+    private javax.swing.JMenuItem CadastroMental;
     private javax.swing.JMenuItem CadastroPaciente;
     private javax.swing.JMenu Consolidar;
     private javax.swing.JMenu Inicio;

@@ -22,6 +22,32 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastroPacienteActionPerformed"/>
               </Events>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="CadastroHipertenso">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Hipertenso"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastroHipertensoActionPerformed"/>
+              </Events>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="CadastroDiabetico">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Diabetico"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="CadastroGestante">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Gestante"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="CadastroMental">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Saude Mental"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CadastroMentalActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="Consolidar">
@@ -29,14 +55,14 @@
             <Property name="text" type="java.lang.String" value="Consolidar"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="Relatorios">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Relatorios"/>
-          </Properties>
-        </Menu>
         <Menu class="javax.swing.JMenu" name="Agenda">
           <Properties>
             <Property name="text" type="java.lang.String" value="Agenda"/>
+          </Properties>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="Relatorios">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Relatorios"/>
           </Properties>
         </Menu>
       </SubComponents>
