@@ -29,18 +29,43 @@ public class CadPaciente extends javax.swing.JPanel {
 
         BGSexo = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        RadioMasc = new javax.swing.JRadioButton();
+        RadioFem = new javax.swing.JRadioButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        CheckDia = new javax.swing.JCheckBox();
+        CheckHiper = new javax.swing.JCheckBox();
+        CheckGes = new javax.swing.JCheckBox();
+        CheckMental = new javax.swing.JCheckBox();
+        CheckAgro = new javax.swing.JCheckBox();
 
         jLabel1.setText("Nome");
+
+        jLabel2.setText("Area/ACS");
+
+        jLabel3.setText("Cartão SUS");
+
+        jLabel4.setText("Data de Nascimento");
+
+        jLabel5.setText("Sexo");
+
+        BGSexo.add(RadioMasc);
+        RadioMasc.setSelected(true);
+        RadioMasc.setText("Masculino");
+        RadioMasc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RadioMascActionPerformed(evt);
+            }
+        });
+
+        BGSexo.add(RadioFem);
+        RadioFem.setText("Feminino");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,18 +80,6 @@ public class CadPaciente extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setText("Area/ACS");
-
-        BGSexo.add(jRadioButton1);
-        jRadioButton1.setText("Feminino");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Cartão SUS");
-
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -79,17 +92,15 @@ public class CadPaciente extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setText("Data deNascimento");
+        CheckDia.setText("Diabetes");
 
-        jLabel5.setText("Sexo");
+        CheckHiper.setText("Hipertensão");
 
-        BGSexo.add(jRadioButton2);
-        jRadioButton2.setText("Masculino");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
-            }
-        });
+        CheckGes.setText("Gestante");
+
+        CheckMental.setText("Saúde Mental");
+
+        CheckAgro.setText("Agrotóxicos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -108,21 +119,31 @@ public class CadPaciente extends javax.swing.JPanel {
                                 .addComponent(jLabel2)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jComboBox1, 0, 87, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jTextField2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(145, 145, 145)
-                                .addComponent(jLabel4))
+                            .addComponent(jLabel3)
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButton2)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(RadioMasc)
+                                    .addComponent(RadioFem))
+                                .addGap(35, 35, 35)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(CheckDia)
+                                            .addComponent(CheckGes))
+                                        .addGap(30, 30, 30)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(CheckHiper)
+                                            .addComponent(CheckMental)))
+                                    .addComponent(CheckAgro))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -148,10 +169,18 @@ public class CadPaciente extends javax.swing.JPanel {
                 .addGap(5, 5, 5)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
-                .addContainerGap(161, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RadioFem)
+                    .addComponent(CheckDia)
+                    .addComponent(CheckHiper))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(RadioMasc)
+                    .addComponent(CheckGes)
+                    .addComponent(CheckMental))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(CheckAgro)
+                .addContainerGap(115, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -171,17 +200,20 @@ public class CadPaciente extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void RadioMascActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RadioMascActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
-
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_RadioMascActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup BGSexo;
+    private javax.swing.JCheckBox CheckAgro;
+    private javax.swing.JCheckBox CheckDia;
+    private javax.swing.JCheckBox CheckGes;
+    private javax.swing.JCheckBox CheckHiper;
+    private javax.swing.JCheckBox CheckMental;
+    private javax.swing.JRadioButton RadioFem;
+    private javax.swing.JRadioButton RadioMasc;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
@@ -189,8 +221,6 @@ public class CadPaciente extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
