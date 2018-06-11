@@ -9,12 +9,12 @@ package tutoria.Telas;
  *
  * @author gabinete
  */
-public class TelaPaciente extends javax.swing.JPanel {
+public class PainelPaciente extends javax.swing.JPanel {
 
     /**
      * Creates new form TelaPaciente
      */
-    public TelaPaciente() {
+    public PainelPaciente() {
         initComponents();
     }
 

@@ -59,6 +59,11 @@ public class Principal extends javax.swing.JFrame {
         Cadastro.setText("Cadastro");
 
         CadastroPaciente.setText("Paciente");
+        CadastroPaciente.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CadastroPacienteMouseClicked(evt);
+            }
+        });
         CadastroPaciente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadastroPacienteActionPerformed(evt);
@@ -120,7 +125,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroPacienteActionPerformed
-        PainelInicio = new TelaPaciente();
+        PainelInicio = new PainelPaciente();
     }//GEN-LAST:event_CadastroPacienteActionPerformed
 
     private void CadastroHipertensoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroHipertensoActionPerformed
@@ -130,6 +135,10 @@ public class Principal extends javax.swing.JFrame {
     private void CadastroMentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroMentalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CadastroMentalActionPerformed
+
+    private void CadastroPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CadastroPacienteMouseClicked
+        PainelInicio = new PainelPaciente();
+    }//GEN-LAST:event_CadastroPacienteMouseClicked
 
     /**
      * @param args the command line arguments
