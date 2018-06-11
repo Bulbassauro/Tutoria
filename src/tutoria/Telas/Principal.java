@@ -120,7 +120,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void CadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroPacienteActionPerformed
-        // TODO add your handling code here:
+        PainelInicio = new TelaPaciente();
     }//GEN-LAST:event_CadastroPacienteActionPerformed
 
     private void CadastroHipertensoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroHipertensoActionPerformed
