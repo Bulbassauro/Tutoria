@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tutoria.Telas;
+package Telas;
+
+import javax.swing.JPanel;
 
 /**
  *
@@ -27,7 +29,7 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        PainelInicio = new javax.swing.JPanel();
+        painel = new javax.swing.JPanel();
         Barra = new javax.swing.JMenuBar();
         Inicio = new javax.swing.JMenu();
         Cadastro = new javax.swing.JMenu();
@@ -42,16 +44,7 @@ public class Principal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout PainelInicioLayout = new javax.swing.GroupLayout(PainelInicio);
-        PainelInicio.setLayout(PainelInicioLayout);
-        PainelInicioLayout.setHorizontalGroup(
-            PainelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
-        );
-        PainelInicioLayout.setVerticalGroup(
-            PainelInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 356, Short.MAX_VALUE)
-        );
+        painel.setLayout(new java.awt.CardLayout());
 
         Inicio.setText("Inicio");
         Barra.add(Inicio);
@@ -110,22 +103,23 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PainelInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(painel, javax.swing.GroupLayout.DEFAULT_SIZE, 677, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 356, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(PainelInicio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(painel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void CadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroPacienteActionPerformed
-        PainelInicio = new PainelPaciente();
+        JPanel aux = new PainelPaciente();
+        painel.removeAll();
+        painel.add(aux);
+        revalidate();
     }//GEN-LAST:event_CadastroPacienteActionPerformed
 
     private void CadastroHipertensoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroHipertensoActionPerformed
@@ -137,7 +131,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_CadastroMentalActionPerformed
 
     private void CadastroPacienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CadastroPacienteMouseClicked
-        PainelInicio = new PainelPaciente();
+        
     }//GEN-LAST:event_CadastroPacienteMouseClicked
 
     /**
@@ -186,7 +180,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem CadastroPaciente;
     private javax.swing.JMenu Consolidar;
     private javax.swing.JMenu Inicio;
-    private javax.swing.JPanel PainelInicio;
     private javax.swing.JMenu Relatorios;
+    private javax.swing.JPanel painel;
     // End of variables declaration//GEN-END:variables
 }

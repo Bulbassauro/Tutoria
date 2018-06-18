@@ -5,7 +5,7 @@
  */
 package tutoria;
 
-import tutoria.Telas.Principal;
+import Telas.Principal;
 
 /**
  *
@@ -19,8 +19,8 @@ public class Tutoria {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Principal Principal = new Principal();
-        Principal.setVisible(true);
+        Principal Tela = new Principal();
+        Tela.setVisible(true);
         
     }
     
