@@ -34,11 +34,11 @@ public class Principal extends javax.swing.JFrame {
         Inicio = new javax.swing.JMenu();
         Cadastro = new javax.swing.JMenu();
         CadastroPaciente = new javax.swing.JMenuItem();
-        CadastroHipertenso = new javax.swing.JMenuItem();
+        Consolidar = new javax.swing.JMenu();
         CadastroDiabetico = new javax.swing.JMenuItem();
         CadastroGestante = new javax.swing.JMenuItem();
+        CadastroHipertenso = new javax.swing.JMenuItem();
         CadastroMental = new javax.swing.JMenuItem();
-        Consolidar = new javax.swing.JMenu();
         Agenda = new javax.swing.JMenu();
         Relatorios = new javax.swing.JMenu();
 
@@ -64,19 +64,23 @@ public class Principal extends javax.swing.JFrame {
         });
         Cadastro.add(CadastroPaciente);
 
+        Barra.add(Cadastro);
+
+        Consolidar.setText("Consolidar");
+
+        CadastroDiabetico.setText("Diabetico");
+        Consolidar.add(CadastroDiabetico);
+
+        CadastroGestante.setText("Gestante");
+        Consolidar.add(CadastroGestante);
+
         CadastroHipertenso.setText("Hipertenso");
         CadastroHipertenso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CadastroHipertensoActionPerformed(evt);
             }
         });
-        Cadastro.add(CadastroHipertenso);
-
-        CadastroDiabetico.setText("Diabetico");
-        Cadastro.add(CadastroDiabetico);
-
-        CadastroGestante.setText("Gestante");
-        Cadastro.add(CadastroGestante);
+        Consolidar.add(CadastroHipertenso);
 
         CadastroMental.setText("Saude Mental");
         CadastroMental.addActionListener(new java.awt.event.ActionListener() {
@@ -84,11 +88,8 @@ public class Principal extends javax.swing.JFrame {
                 CadastroMentalActionPerformed(evt);
             }
         });
-        Cadastro.add(CadastroMental);
+        Consolidar.add(CadastroMental);
 
-        Barra.add(Cadastro);
-
-        Consolidar.setText("Consolidar");
         Barra.add(Consolidar);
 
         Agenda.setText("Agenda");
@@ -123,7 +124,10 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_CadastroPacienteActionPerformed
 
     private void CadastroHipertensoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroHipertensoActionPerformed
-        // TODO add your handling code here:
+        JPanel aux = new PainelHiper("Hipertenso");
+        painel.removeAll();
+        painel.add(aux);
+        revalidate();
     }//GEN-LAST:event_CadastroHipertensoActionPerformed
 
     private void CadastroMentalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroMentalActionPerformed

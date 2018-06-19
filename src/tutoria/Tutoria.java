@@ -6,6 +6,8 @@
 package tutoria;
 
 import Telas.Principal;
+import java.awt.Frame;
+import javax.swing.JFrame;
 
 /**
  *
@@ -20,6 +22,7 @@ public class Tutoria {
         // TODO code application logic here
         
         Principal Tela = new Principal();
+        Tela.setExtendedState(JFrame.MAXIMIZED_BOTH);
         Tela.setVisible(true);
         
     }
